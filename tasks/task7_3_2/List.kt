@@ -1,6 +1,6 @@
 // Task 7.3.1: list element access
 fun main(){
-    val numbers = listOf(9, 3, 6, 2, 8, 5)
+    val numbers = mutableListOf(9, 3, 6, 2, 8, 5)
     println(numbers[0])
     println(numbers.get(0))
     //println(numbers[10])
@@ -8,4 +8,6 @@ fun main(){
     println(numbers.first())
     println(numbers.last())
     //numbers[0] = 4
+    numbers.add(67)
+    println(numbers)
 }
