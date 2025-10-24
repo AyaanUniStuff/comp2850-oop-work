@@ -4,11 +4,20 @@ import java.time.LocalDate
 class Person(var name: String, val birth: LocalDate) {
     var isMarried = false
     constructor(name: String, birthString: String) : this(name, LocalDate.parse(birthString))
+
+    init{
+        require(name.isNotBlank()) {"Name can not be blank"}
+    }
 }
 
 fun main(){
-    val date = LocalDate.of(1997, 8, 23)
-    val p = Person("Ayaan", "1997-08-23")
+    println("Enter your name:")
+    val name = readln()
+
+    println("Enter your DOB:")
+    val dob = readln()
+
+    val p = Person(name, dob)
     println(p.name)
     println(p.birth)
 }
