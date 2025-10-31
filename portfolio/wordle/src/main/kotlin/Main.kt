@@ -17,4 +17,3 @@ fun main() {
     }
     println("You lose")
 }
-
