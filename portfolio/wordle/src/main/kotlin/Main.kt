@@ -7,7 +7,6 @@ fun main() {
 
     while (attempt < MAX_ATTEMPT) {
         attempt += 1
-        print(guessWord)
         var guess = obtainGuess(attempt)
         val matches = evaluateGuess(guess, guessWord)
         displayGuess(guess, matches)
